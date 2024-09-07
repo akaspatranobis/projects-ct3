@@ -1,0 +1,22 @@
+#An object which can store values --variable
+
+- name: Demo on vars
+  hosts: localhost
+  vars:
+    URL_PLAY: play.example.com
+  tasks:
+    - name: Print variable
+      ansible.builtin.debug:
+        msg: URL_PLAY - {{ URL_PLAY }}
+    - name: Task variable
+      ansible.builtin.debug:
+        msg: URL_TASK - {{ URL_TASK }}
+      vars:
+        URL_TASK: tasks.example.com    
+
+
+
+
+#Varibles can be defined at mutiple levels
+# 1. Global varible 
+# 2. Task Varibale       
