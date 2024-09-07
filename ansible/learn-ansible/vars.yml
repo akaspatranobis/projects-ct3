@@ -19,7 +19,7 @@
       register: OUTPUT 
     - name: Print OUTPUT of previous task
       ansible.builtin.debug:
-        msg: "{{ OUTPUT }}"     
+        msg: "{{ OUTPUT.stdout }}"     
           
 
 
