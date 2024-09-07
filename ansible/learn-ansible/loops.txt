@@ -1,0 +1,42 @@
+Loops -- iterate an operation until the condition fails
+
+print 1 -- 10000 times --  ( print 1 until <=10000 )
+1
+2
+3
+4
+5
+
+for (i=1; i<=5; i++)  i=i+1
+ system.out.print "i"
+
+Dry run:-
+Iteration-1
+----------------
+i=1 ; 1<=5 ? True
+ print 1
+Iteration-2
+---------------- 
+i=2; 2<=5 ? True
+  print 2
+
+Iterration 6
+----------------
+i=5+1=6 , 6<=5 ??? False  
+
+
+loop -- Ansible
+
+- name: Loop Demo
+  hosts: localhost
+  tasks:
+    - name: Print Fruits
+      ansible.builtin.debug:
+        msg: "Fruit Name - {{ item }}"
+      loop:
+        - apple
+        - banana
+        - orange
+
+item =apple
+
