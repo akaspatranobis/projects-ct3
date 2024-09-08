@@ -4,4 +4,8 @@
 
 - name: Print statement
   ansible.builtin.debug:
-    msg: Hello    
+    msg: Hello  
+
+- name: Print statement
+  ansible.builtin.debug:
+    msg: "{{ URL_LIST }}"     
