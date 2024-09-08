@@ -18,7 +18,12 @@
     - name: Adding Application User
       ansible.builtin.user:
         name: expense
-    
+
+    # - name: Import Application Common tasks
+    #   ansible.builtin.import_role:
+    #     name: common
+    #     tasks_from: main.yml
+
     - name: Clean the old Content
       ansible.builtin.file:
         path: /app
@@ -33,8 +38,9 @@
       ansible.builtin.unarchive:
         src: https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip
         dest: /app
-        remote_src: yes 
+        remote_src: yes
 
+  
     - name: Download NodeJS Dependencies
       community.general.npm:
         path: /app
