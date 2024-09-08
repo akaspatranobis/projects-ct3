@@ -1,6 +1,6 @@
 - name: Print statement
   ansible.builtin.debug:
-    msg: {{ URL_PLAY }} 
+    msg: URL_PLAY - {{ URL_PLAY }} 
 
 - name: Print statement
   ansible.builtin.debug:
