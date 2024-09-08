@@ -1,0 +1,7 @@
+- name: Print statement
+  ansible.builtin.debug:
+    msg: {{ URL_PLAY }} 
+
+- name: Print statement
+  ansible.builtin.debug:
+    msg: Hello    
