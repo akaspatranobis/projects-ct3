@@ -14,7 +14,7 @@ variable "z_map" {
 }
 
 variable "env" {}
-
+variable "tag" {}
 
 output "x" {
     value = var.x
@@ -35,6 +35,10 @@ output "z_x" {
 output "env-name" {
     value = "Environment Name - ${var.env}"
 }
+
+output "tag" {
+    value = var.tag
+} 
 
 
 
