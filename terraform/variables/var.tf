@@ -29,7 +29,14 @@ output "z_x" {
     value = var.z_map["x"]
 } 
 
+output "env-name" {
+    value = "Environment Name - ${var.env}"
+}
+
 
 
 # 4 types int, bool , list , map
 #var.variablename
+// 1.var.tf
+// 2.*.tfvars
+// 3.*.auto.tfvars
