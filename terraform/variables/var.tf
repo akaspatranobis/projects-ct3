@@ -13,6 +13,9 @@ variable "z_map" {
    }
 }
 
+variable "env" {}
+
+
 output "x" {
     value = var.x
 } 
