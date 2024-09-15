@@ -9,3 +9,8 @@ module "demo-2" {
     Name   = "Cloud-Train-Stage"
     instance_type = "t2.micro"
 }
+
+// module "s3-bucket" {
+//   source  = "terraform-aws-modules/s3-bucket/aws"
+//   version = "4.1.2"
+// }
