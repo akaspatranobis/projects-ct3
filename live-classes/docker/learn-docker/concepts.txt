@@ -83,4 +83,4 @@ CMD ["You can chnage this from runtime also"]
 
 3. docker run imagename ----> This will give ur image a life and start running the app u built as container
 
-
+docker run --name nginx imagename -p 8081:80 (hostport:containerport)
