@@ -84,3 +84,39 @@ CMD ["You can chnage this from runtime also"]
 3. docker run imagename ----> This will give ur image a life and start running the app u built as container
 
 docker run --name nginx imagename -p 8081:80 (hostport:containerport)
+
+
+# run 100 containers
+docker run
+
+Docker Compose Files --> Running multi Stack Docker conatiners
+These are simple YAML files
+
+docker run -it -d --name nginx4 -p 8085:80 app:v1
+
+version: '3'
+services:  -- stands for holding the entire stack of  the containers list
+  conatiner 1:
+    image: app:v1
+    ports:
+    - "8085:80"
+    name: nginx4
+    command : 
+  container 2:
+    image: image:v2
+    ports:
+    - "8084:80"
+    env:
+    - email: akas@gmail.command
+    - config: test
+    volumes:
+    - db_data:/app
+    restart:  always
+
+docker-compose.yaml   
+
+Tomorrow next items to learn first is docker volumes ad next docker networking......   
+
+FROM centos:tag
+RUN install java
+RUN install python
