@@ -13,3 +13,5 @@ COPY script1.py .
 
 # Run the Python script and pass the environment variable as an argument
 ENTRYPOINT ["python", "script1.py"]
+
+#docker build --build-arg build_time_var="Hello, I am running this from my build image stage" -t build-arg-example -f buildtime.Dockerfile .

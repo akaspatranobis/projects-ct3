@@ -9,3 +9,5 @@ COPY script.py .
 
 # Set the default command to run the script
 ENTRYPOINT ["python", "script.py"]
+
+#docker run python-runtime-args-example arg1 arg2arg3 abc3
