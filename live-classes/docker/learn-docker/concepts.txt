@@ -127,3 +127,7 @@ you use a YAML file to configure your application's services. Then, with a singl
 create and start all the services from your configuration. Run docker compose up
 and
 compose starts and runs your entire app.
+
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip3 install -r requirements.txt && \
+    pip
