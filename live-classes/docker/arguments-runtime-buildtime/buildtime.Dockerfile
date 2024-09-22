@@ -9,7 +9,7 @@ ENV build_time_env_var=${build_time_var}
 
 # Copy a Python script into the container
 WORKDIR /app
-COPY script.py .
+COPY script1.py .
 
 # Run the Python script and pass the environment variable as an argument
-ENTRYPOINT ["python", "script.py"]
+ENTRYPOINT ["python", "script1.py"]
