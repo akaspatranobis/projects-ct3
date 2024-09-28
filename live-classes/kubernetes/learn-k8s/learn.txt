@@ -64,6 +64,43 @@ Unable to locate credentials. You can configure credentials by running "aws conf
 Unable to locate credentials. You can configure credentials by running "aws configure".
 [ec2-user@ip-172-31-91-30 ~]$ aws sts get-caller-identity
 
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: example-redis-config
+data:
+  redis-config: |
+    maxmemory 2mb
+    maxmemory-policy allkeys-lru
+
+
+alternative:
+------
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: special-config
+  namespace: default
+data:
+  special.how: very
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-config
+  namespace: default
+data:
+  log_level: INFO
+
+---
+
+configmapkeyRef:
+envFrom:
+volumes:
+
 
 
 
