@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: 'nginx:latest'
+          image: nginx:latest
           ports:
             - containerPort: 80
 
@@ -32,8 +32,10 @@ metadata:
   namespace: app-1
 spec:
   ports:
-    - port: 80
+    - nodePort: 30007
+      port: 80
       protocol: TCP
       targetPort: 80
   selector:
     app: nginx
+  type: NodePort
