@@ -55,6 +55,13 @@ spec:
             secretKeyRef:
               name: mysqlpass
               key: password
+        resources:
+          requests:
+            memory: "200Mi"
+            cpu: "250m"
+          limits:
+            memory: "300Mi"
+            cpu: "500m"      
         ports:
         - containerPort: 80
           name: wordpress
